@@ -2,20 +2,30 @@
 import PrimaryButton from './buttons/PrimaryButton.astro'
 import { links } from '../utils/links'
 ---
-<nav class="nav-wrapper">
-    <img src="/images/text-logo.svg" alt="keyhunt logo">
-    <PrimaryButton text='GET STARTED' href={links.home}/>
-</nav>
+<header class="header">
+    <nav class="nav-wrapper">
+        <img src="/images/text-logo.svg" alt="keyhunt logo">
+        <PrimaryButton text='GET STARTED' href={links.home}/>
+    </nav>
+</header>
 
 <style lang="scss">
-    .nav-wrapper{
+    .header{
         width: 100%;
         height: 70px;
-        padding: var(--space-l);
+        position: absolute;
+        border-bottom: 2px solid var(--smoke);
+        padding: var(--space-m);
+    }
+
+    .nav-wrapper{
+        width: 100%;
+        height: 100%;
         display: flex;
         align-items: center;
         justify-content: space-between;
-
+        overflow: visible;
+        
         img{
             max-height: 100%;
             height: 60%;

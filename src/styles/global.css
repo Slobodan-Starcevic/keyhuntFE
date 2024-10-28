@@ -9,7 +9,12 @@
     font-family: 'DIN', sans-serif;
 
     --snow: hsl(0, 0%, 100%);
+    --cloud: hsl(0, 0%, 97%);
+    --smoke: hsl(0, 0%, 90%);
+    --pebble: hsl(0, 0%, 69%);
+    --steel: hsl(0, 0%, 47%);
     --ash: hsl(0, 0%, 29%);
+    --obsidian: hsl(0, 0%, 13%);
     --fox: hsl(35, 100%, 50%);
     --fox-light: hsl(35, 100%, 55%);
     --fox-dark: hsl(35, 100%, 40%);
