@@ -1,0 +1,127 @@
+html, body {
+    scroll-behavior: smooth;
+    
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    box-sizing: border-box;
+
+    font-family: 'DIN', sans-serif;
+
+    --loveless-pink: hsl(304,90%,67%,100%);
+    --loveless-pink-dark: hsl(304,90%,47%,100%);
+    --loveless-blue-light: hsl(180,80%,86%,100%);
+    --loveless-blue: hsl(180,60%,66%,100%);
+    --loveless-blue-dark: hsl(180,60%,46%,100%);
+    --loveless-black: hsl(0,0%,0%);
+    --loveless-white: hsl(0,0%,100%);
+    --ease-1: cubic-bezier(0.475,0.425,0,0.995);
+    --ease-2: cubic-bezier(0.835,-0.005,0.06,1);
+    --ease-3: cubic-bezier(0.19,1,0.22,1);
+    --ease-4: cubic-bezier(0.63,0.03,0.21,1);
+
+    --space-none: 0rem;
+    --space-xs: 0.25rem;    /* 4px */
+    --space-s: 0.5rem;      /* 8px */
+    --space-m: 0.75rem;     /* 12px */
+    --space-l: 1rem;        /* 16px */
+    --space-xl: 1.25rem;    /* 20px */
+    --space-2xl: 1.5rem;    /* 24px */
+    --space-3xl: 2rem;      /* 32px */
+    --space-4xl: 2.5rem;    /* 40px */
+    --space-5xl: 3rem;      /* 48px */
+    --space-6xl: 4rem;      /* 64px */
+
+    --radius-none: 0px;
+    --radius-s: 2px;
+    --radius-m: 4px;
+    --radius-l: 8px;
+    --radius-xl: 16px;
+    --radius-2xl: 32px;
+    --radius-full: 9999px;
+
+    --font-size-xs: 0.75rem;    /* 12px */
+    --font-size-s: 0.875rem;    /* 14px */
+    --font-size-m: 1rem;        /* 16px */
+    --font-size-l: 1.25rem;     /* 20px */
+    --font-size-xl: 1.563rem;   /* 25px */
+    --font-size-2xl: 1.953rem;  /* 31px */
+    --font-size-3xl: 2.441rem;  /* 39px */
+    --font-size-4xl: 3.052rem;  /* 49px */
+    --font-size-5xl: 3.815rem;  /* 61px */
+    --font-size-6xl: 4.768rem;  /* 76px */
+}
+
+/* @media screen and (max-width : 320px)
+{
+  body or yourdiv element
+  {
+    font:<size>px/em/rm;
+  }
+}
+@media screen and (max-width : 1204px)
+{
+  body or yourdiv element
+  {
+    font:<size>px/em/rm;
+  }
+} */
+
+/* FONT FACES */
+@font-face {
+    font-family: 'DIN';
+    src: url('/fonts/din_light.woff2') format('woff2'),
+         url('/fonts/din_light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'DIN';
+    src: url('/fonts/din_reg.woff2') format('woff2'),
+         url('/fonts/din_reg.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'DIN';
+    src: url('/fonts/din_medi.woff2') format('woff2'),
+         url('/fonts/din_medi.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'DIN';
+    src: url('/fonts/din_bold.woff2') format('woff2'),
+         url('/fonts/din_bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'DIN';
+    src: url('/fonts/din_black.woff2') format('woff2'),
+         url('/fonts/din_black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Torus';
+    src: url('/fonts/torus_light.woff2') format('woff2'),
+         url('/fonts/torus_light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Torus';
+    src: url('/fonts/torus_reg.woff2') format('woff2'),
+         url('/fonts/torus_reg.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Torus';
+    src: url('/fonts/torus_bold.woff2') format('woff2'),
+         url('/fonts/torus_bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
