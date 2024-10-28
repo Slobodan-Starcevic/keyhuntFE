@@ -1,0 +1,42 @@
+---
+type Props = {
+    text: string;
+    href?: string;
+}
+
+const {text, href} = Astro.props
+
+---
+{href ? (
+    <a href={href} class="primary-button">
+        {text}
+    </a>
+) : (
+    <button class="primary-button">
+        {text}
+    </button>
+)}
+
+<style lang="scss">
+.primary-button{
+    text-decoration: none;
+    all: unset;
+    cursor: pointer;
+    color: var(--snow);
+    background-color: var(--fox);
+    min-width: max-content;
+    flex: 0 0;
+    padding: 10px 20px;
+    border-radius: var(--radius-xl);
+    font-weight: 700;
+    box-shadow: 0 4px 0 var(--fox-dark);
+    transition: all 0.1s;
+    &:hover{
+        background-color: var(--fox-light);
+    }
+    &:active{
+        box-shadow: none;
+        transform: translateY(4px);
+    }
+}
+</style>

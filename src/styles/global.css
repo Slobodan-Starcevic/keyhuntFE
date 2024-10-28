@@ -1,4 +1,4 @@
-html, body {
+* {
     scroll-behavior: smooth;
     
     margin: 0;
@@ -8,13 +8,13 @@ html, body {
 
     font-family: 'DIN', sans-serif;
 
-    --loveless-pink: hsl(304,90%,67%,100%);
-    --loveless-pink-dark: hsl(304,90%,47%,100%);
-    --loveless-blue-light: hsl(180,80%,86%,100%);
-    --loveless-blue: hsl(180,60%,66%,100%);
-    --loveless-blue-dark: hsl(180,60%,46%,100%);
-    --loveless-black: hsl(0,0%,0%);
-    --loveless-white: hsl(0,0%,100%);
+    --snow: hsl(0, 0%, 100%);
+    --ash: hsl(0, 0%, 29%);
+    --fox: hsl(35, 100%, 50%);
+    --fox-light: hsl(35, 100%, 55%);
+    --fox-dark: hsl(35, 100%, 40%);
+    --sky: hsl(199, 93%, 59%);
+
     --ease-1: cubic-bezier(0.475,0.425,0,0.995);
     --ease-2: cubic-bezier(0.835,-0.005,0.06,1);
     --ease-3: cubic-bezier(0.19,1,0.22,1);
@@ -36,8 +36,9 @@ html, body {
     --radius-s: 2px;
     --radius-m: 4px;
     --radius-l: 8px;
-    --radius-xl: 16px;
-    --radius-2xl: 32px;
+    --radius-xl: 12px;
+    --radius-2xl: 16px;
+    --radius-3xl: 32px;
     --radius-full: 9999px;
 
     --font-size-xs: 0.75rem;    /* 12px */
