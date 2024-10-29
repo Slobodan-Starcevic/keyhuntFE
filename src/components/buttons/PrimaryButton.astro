@@ -25,7 +25,7 @@ const {text, href} = Astro.props
     color: var(--snow);
     background-color: var(--fox);
     min-width: max-content;
-    flex: 0 0;
+    flex: inherit;
     padding: 10px 20px;
     border-radius: var(--radius-xl);
     font-size: 15px;
@@ -33,6 +33,7 @@ const {text, href} = Astro.props
     letter-spacing: .25px;
     box-shadow: 0 4px 0 var(--fox-dark);
     transition: all 0.1s;
+    text-align: center;
     &:hover{
         background-color: var(--fox-light);
     }

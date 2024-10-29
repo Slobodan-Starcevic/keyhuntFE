@@ -1,10 +1,11 @@
 * {
     scroll-behavior: smooth;
-    
+
     margin: 0;
     padding: 0;
     overflow-x: hidden;
     box-sizing: border-box;
+    color: var(--ash);
 
     font-family: 'DIN', sans-serif;
 
@@ -19,6 +20,8 @@
     --fox-light: hsl(35, 100%, 55%);
     --fox-dark: hsl(35, 100%, 40%);
     --sky: hsl(199, 93%, 59%);
+    --lemon: hsl(47, 100%, 54%);
+    --elf: hsl(182, 57%, 41%);
 
     --ease-1: cubic-bezier(0.475,0.425,0,0.995);
     --ease-2: cubic-bezier(0.835,-0.005,0.06,1);
@@ -57,21 +60,73 @@
     --font-size-5xl: 3.815rem;  /* 61px */
     --font-size-6xl: 4.768rem;  /* 76px */
 }
-
-/* @media screen and (max-width : 320px)
-{
-  body or yourdiv element
-  {
-    font:<size>px/em/rm;
-  }
+body{
+    min-height: 100vh;
+    width: 100vw;
 }
-@media screen and (max-width : 1204px)
-{
-  body or yourdiv element
-  {
-    font:<size>px/em/rm;
-  }
-} */
+/* TEXT TAGS STYLING */
+p{
+    font-weight: 500;
+}
+h1{
+    font-family: 'Torus', sans-serif;
+    font-weight: 700;
+    
+    text-align: center;
+    overflow: hidden;
+}
+h1 span{
+    font-family: inherit;
+}
+
+/* SHARED STYLES */
+.global-shared-section-col{
+    display: flex;
+    flex-direction: column;
+    padding: var(--space-3xl) var(--space-l);
+}
+.global-shared-section-row{
+    display: flex;
+    flex-direction: row;
+    padding: var(--space-3xl) var(--space-l);
+}
+
+/* MISCELLANEOUS */
+.global-orange-text{
+    color: var(--fox);
+}
+.global-font-light{
+    font-weight: 300;
+}
+.global-font-regular{
+    font-weight: 400;
+}
+.global-font-medium{
+    font-weight: 500;
+}
+.global-font-bold{
+    font-weight: 700;
+}
+.global-font-black{
+    font-weight: 900;
+}
+.global-font-size-s{
+    font-size: var(--font-size-s);
+}
+
+/* DYNAMIC FONT SIZES */
+@media screen and (max-width : 767px) {
+    h1{
+        font-size: var(--font-size-2xl);
+        line-height: 1.1;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 1079px) {
+  
+}
+@media screen and (min-width : 1080px) {
+  
+}
 
 /* FONT FACES */
 @font-face {
