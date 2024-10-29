@@ -54,9 +54,6 @@ import PrimaryButton from "../buttons/PrimaryButton.astro"
 </section>
 
 <style lang="scss">
-    .hero-section-helper{
-        margin-top: 70px;
-    }
     .steps-wrapper{
         display: flex;
         flex-direction: column;
@@ -134,7 +131,7 @@ import PrimaryButton from "../buttons/PrimaryButton.astro"
             font-weight: 700;
         }
         .hero-section-helper{
-            margin-top: var(--space-2xl);
+            margin-top: calc(var(--space-2xl) + 70px);
         }
     }
     @media screen and (min-width: 768px) {
@@ -150,12 +147,12 @@ import PrimaryButton from "../buttons/PrimaryButton.astro"
             font-size: var(--font-size-m);
         }
         .hero-section-helper{
-            margin-top: var(--space-4xl);
+            margin-top: calc(var(--space-4xl) + 70px);
         }
     }
     @media screen and (min-width : 1080px) {
         .hero-section-helper{
-            margin-top: var(--space-6xl);
+            margin-top: calc(var(--space-6xl) + 70px);
         }
     }
 </style>
