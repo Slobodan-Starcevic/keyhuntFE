@@ -1,0 +1,81 @@
+---
+type Props = {
+
+}
+
+const {} = Astro.props
+
+---
+<section class="global-section">
+    <div class="global-content-wrapper">
+        <h1 class="global-orange-text">how it works</h1>
+        <div class="card">
+            <div class="card-step">1</div>
+            <div class="card-content">
+                <p class="card-title">Create a search profile</p>
+                <p>Tell us your preferences, and let us do the searching for you! We monitor hundreds of sites 24/7 so you can finally take a break.</p>
+            </div>
+            <img src="/illustrations/form.svg" alt="">
+        </div>
+        <div class="card">
+            <div class="card-step">2</div>
+            <div class="card-content">
+                <p class="card-title">Get notified</p>
+                <p>Your perfect match appears online? You'll know right away with instant notifications.</p>
+            </div>
+            <img src="/illustrations/notifications.svg" alt="">
+        </div>
+        <div class="card">
+            <div class="card-step">3</div>
+            <div class="card-content">
+                <p class="card-title">Create a search profile</p>
+                <p>Respond to your matches in seconds and be one of the first applicants. </p>
+            </div>
+            <img src="/illustrations/apply.svg" alt="">
+        </div>
+    </div>
+</section>
+
+<style lang="scss">
+    .card{
+        position: relative;
+        overflow: visible;
+        width: 100%;
+        height: auto;
+        background-color: var(--cloud);
+        padding: var(--space-2xl) var(--space-l);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: var(--space-xl);
+        border-radius: var(--radius-xl);
+
+        .card-step{
+            position: absolute;
+            top: 0;
+            transform: translateY(-50%);
+            width: 35px;
+            height: 35px;
+            border-radius: var(--radius-full);
+            background-color: var(--fox);
+            color: var(--snow);
+            font-family: 'Torus', 'DIN', sans-serif;
+            font-weight: 700;
+            font-size: var(--font-size-xl);
+        }
+        .card-content{
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-xs);
+            .card-title{
+                font-size: var(--font-size-l);
+                font-weight: 700;
+            }
+        }
+        img{
+            width: auto;
+            height: 150px;
+        }
+    }
+</style>

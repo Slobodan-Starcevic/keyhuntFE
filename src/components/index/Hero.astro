@@ -1,47 +1,47 @@
 ---
 import { links } from "../../utils/links"
 import PrimaryButton from "../buttons/PrimaryButton.astro"
-
-const props = Astro.props
 ---
-<section class="global-shared-section-col">
-    <h1>Finding a rental home has <span class="global-orange-text">never been easier</span></h1>
-    <div class="steps-wrapper">
-        <div class="step-wrapper">
-            <div class="step-number-wrapper">
-                <span>1</span>
-            </div>
-            <div class="step-text">
-                <p class="global-font-bold">Tell us what you are looking for</p>
-                <p class="global-font-size-s">We’ll take it from here, so say goodbye to the manual search!</p>
+<section class="global-section">
+    <div class="global-content-wrapper">
+        <div class="text-wrapper">
+            <h1>Finding a rental home has <span class="global-orange-text">never been easier</span></h1>
+            <div class="steps-wrapper">
+                <div class="step-wrapper">
+                    <div class="step-number-wrapper">
+                        <span>1</span>
+                    </div>
+                    <div class="step-text">
+                        <p class="global-font-bold">Tell us what you are looking for</p>
+                        <p class="global-font-size-s">We’ll take it from here, so say goodbye to the manual search!</p>
+                    </div>
+                </div>
+                <div class="step-wrapper">
+                    <div class="step-number-wrapper">
+                        <span>2</span>
+                    </div>
+                    <div class="step-text">
+                        <p class="global-font-bold">Get instant alerts</p>
+                        <p class="global-font-size-s">New rental online? We will let you know first!</p>
+                    </div>
+                </div>
+                <div class="step-wrapper">
+                    <div class="step-number-wrapper">
+                        <span>3</span>
+                    </div>
+                    <div class="step-text">
+                        <p class="global-font-bold">Get more viewings</p>
+                        <p class="global-font-size-s">Have an advantage over others and be the first to reply</p>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="step-wrapper">
-            <div class="step-number-wrapper">
-                <span>2</span>
+        <div class="hero-button-wrapper">
+            <PrimaryButton text="GET STARTED FOR FREE" href={links.home}/>
+            <div class="hero-button-undertitle">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2S2 6.477 2 12s4.477 10 10 10m-1.87-8.2h1.37c.236 0 .354 0 .427.073s.073.191.073.427v4.43c0 .89 0 1.336.196 1.38c.197.042.383-.362.758-1.17l2.731-5.9c.592-1.278.888-1.917.593-2.378s-1-.462-2.408-.462H12.5c-.236 0-.354 0-.427-.073S12 9.936 12 9.7V5.27c0-.89 0-1.336-.196-1.38c-.197-.042-.383.362-.758 1.17l-2.731 5.9c-.592 1.278-.888 1.917-.593 2.378s1 .462 2.408.462" clip-rule="evenodd"/></svg>
+                <p>For a limited time only!</p>
             </div>
-            <div class="step-text">
-                <p class="global-font-bold">Get instant alerts</p>
-                <p class="global-font-size-s">New rental online? We will let you know first!</p>
-            </div>
-        </div>
-        <div class="step-wrapper">
-            <div class="step-number-wrapper">
-                <span>3</span>
-            </div>
-            <div class="step-text">
-                <p class="global-font-bold">Get more viewings</p>
-                <p class="global-font-size-s">Have an advantage over others and be the first to reply</p>
-            </div>
-        </div>
-    </div>
-    <div class="hero-button-wrapper">
-        <PrimaryButton text="GET STARTED FOR FREE" href={links.home}/>
-        <div class="hero-button-undertitle">
-            <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24" {...props}>
-                <path fill="currentColor" fill-rule="evenodd" d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2S2 6.477 2 12s4.477 10 10 10m-1.87-8.2h1.37c.236 0 .354 0 .427.073s.073.191.073.427v4.43c0 .89 0 1.336.196 1.38c.197.042.383-.362.758-1.17l2.731-5.9c.592-1.278.888-1.917.593-2.378s-1-.462-2.408-.462H12.5c-.236 0-.354 0-.427-.073S12 9.936 12 9.7V5.27c0-.89 0-1.336-.196-1.38c-.197-.042-.383.362-.758 1.17l-2.731 5.9c-.592 1.278-.888 1.917-.593 2.378s1 .462 2.408.462" clip-rule="evenodd" />
-            </svg>
-            <p>For a limited time only!</p>
         </div>
     </div>
 </section>
@@ -50,8 +50,7 @@ const props = Astro.props
     .steps-wrapper{
         display: flex;
         flex-direction: column;
-        gap: var(--space-m);
-        margin: var(--space-l) 0 var(--space-3xl) 0;
+        margin: var(--space-l) 0 0 0;
         .step-wrapper{
             display: flex;
             flex-direction: row;
@@ -90,15 +89,20 @@ const props = Astro.props
 
         .hero-button-undertitle{
             display: flex;
+            align-items: center;
+            justify-content: center;
             color: var(--elf);
             p{
                 font-size: var(--font-size-s);
                 text-align: center;
                 color: var(--elf);
-                font-weight: 500;
             }
             svg{
-                fill:var(--elf);;
+                height: var(--font-size-m);
+                width: auto;
+                path{
+                    fill: var(--elf) !important;
+                }
             }
         }
     }
