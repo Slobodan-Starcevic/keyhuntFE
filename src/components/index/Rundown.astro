@@ -6,39 +6,57 @@ type Props = {
 const {} = Astro.props
 
 ---
-<section class="global-section">
+<section class="global-section-small">
     <div class="global-content-wrapper">
         <div class="global-header-wrapper">
-            <h1 class="global-orange-color">how it works</h1>
+            <h1 class="global-orange-color header-helper-wrapper">how it works</h1>
         </div>
-        <div class="card">
-            <div class="card-step">1</div>
-            <div class="card-content">
-                <p class="card-title">Create a search profile</p>
-                <p>Tell us your preferences, and let us do the searching for you! We monitor hundreds of sites 24/7 so you can finally take a break.</p>
+        <div class="cards-wrapper">
+            <div class="card">
+                <div class="card-step">1</div>
+                <div class="card-content">
+                    <p class="card-title">Create a search profile</p>
+                    <div class="card-content-inner">
+                        <p>Tell us your preferences, and let us do the searching for you! We monitor hundreds of sites 24/7 so you can finally take a break.</p>
+                        <img src="/illustrations/form.svg" alt="">
+                    </div>
+                </div>
             </div>
-            <img src="/illustrations/form.svg" alt="">
-        </div>
-        <div class="card">
-            <div class="card-step">2</div>
-            <div class="card-content">
-                <p class="card-title">Get notified</p>
-                <p>Your perfect match appears online? You'll know right away with instant notifications.</p>
+            <div class="card">
+                <div class="card-step">2</div>
+                <div class="card-content">
+                    <p class="card-title">Get notified</p>
+                    <div class="card-content-inner">
+                        <p>Your perfect match appears online? You'll know right away with instant notifications.</p>
+                        <img src="/illustrations/notifications.svg" alt="">
+                    </div>
+                </div>
             </div>
-            <img src="/illustrations/notifications.svg" alt="">
-        </div>
-        <div class="card">
-            <div class="card-step">3</div>
-            <div class="card-content">
-                <p class="card-title">Create a search profile</p>
-                <p>Respond to your matches in seconds and be one of the first applicants. </p>
+            <div class="card">
+                <div class="card-step">3</div>
+                <div class="card-content">
+                    <p class="card-title">Create a search profile</p>
+                    <div class="card-content-inner">
+                        <p>Respond to your matches in seconds and be one of the first applicants. </p>
+                        <img src="/illustrations/apply.svg" alt="">
+                    </div>
+                </div>
             </div>
-            <img src="/illustrations/apply.svg" alt="">
         </div>
     </div>
 </section>
 
 <style lang="scss">
+    .header-helper-wrapper{
+        text-align: center;
+    }
+    .cards-wrapper{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow: visible;
+        gap: var(--space-4xl);
+    }
     .card{
         position: relative;
         overflow: visible;
@@ -50,7 +68,6 @@ const {} = Astro.props
         flex-direction: column;
         align-items: center;
         text-align: center;
-        gap: var(--space-xl);
         border-radius: var(--radius-xl);
 
         .card-step{
@@ -71,13 +88,45 @@ const {} = Astro.props
             flex-direction: column;
             gap: var(--space-xs);
             .card-title{
-                font-size: var(--font-size-l);
                 font-weight: 700;
+            }
+            .card-content-inner{
+                display: flex;
+                gap: var(--space-2xl);
             }
         }
         img{
             width: auto;
             height: 150px;
+        }
+    }
+    @media screen and (max-width : 767px) {
+        .card-content-inner{
+            flex-direction: column;
+        }
+        .card-title{
+            font-size: var(--font-size-l);
+        }
+    }
+    @media screen and (min-width: 768px) {
+        .card{
+            width: 600px;
+            padding: var(--space-2xl);
+        }
+        .card-title{
+            font-size: var(--font-size-xl);
+        }
+        .card-content-inner{
+            flex-direction: row;
+            img{
+                flex: 1 1;
+                height: 200px;
+            }
+            p{
+                flex: 1 1;
+                text-align: left;
+                font-size: var(--font-size-l);
+            }
         }
     }
 </style>
