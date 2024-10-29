@@ -81,6 +81,9 @@ h1 span{
 }
 
 /* SHARED STYLES */
+.hidden{
+    display: none !important;
+}
 .global-section{
     display: flex;
 }

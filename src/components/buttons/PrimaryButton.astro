@@ -2,17 +2,19 @@
 type Props = {
     text: string;
     href?: string;
+    id?: string;
+    className?: string;
 }
 
-const {text, href} = Astro.props
+const {text, href, id, className} = Astro.props
 
 ---
 {href ? (
-    <a href={href} class="primary-button">
+    <a href={href} class={`primary-button ${className}`} id={id}>
         {text}
     </a>
 ) : (
-    <button class="primary-button">
+    <button class={`primary-button ${className}`} id={id}>
         {text}
     </button>
 )}

@@ -5,7 +5,34 @@ import Layout from '../layouts/Layout.astro';
 import Rundown from '../components/index/Rundown.astro'
 import Comparison from '../components/index/Comparison.astro'
 ---
+<script>
+	document.addEventListener('DOMContentLoaded', () => {
+        const headerButton = document.getElementById('header-button');
+        const footerButton = document.getElementById('footer-button');
+        const heroButton = document.getElementById('hero-button');
 
+        if (headerButton && heroButton && footerButton) {
+            console.log('hello')
+            const observer = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach(entry => {
+                        if (entry.target === heroButton) {
+                            if (entry.isIntersecting) {
+                                headerButton.classList.add('hidden');
+                            } else {
+                                headerButton.classList.remove('hidden');
+                            }
+                        }
+                    });
+                },
+                { threshold: 0.1 }
+            );
+
+            observer.observe(heroButton);
+            observer.observe(footerButton);
+		}
+	});
+</script>
 <Layout title="Keyhunt">
 	<main>
 		<Hero/>
