@@ -64,12 +64,11 @@
 
     .matrix{
         width: 100%;
-        padding: var(--space-m);
+        padding: var(--space-xl) var(--space-m);
         display: flex;
         flex-direction: column;
         gap: var(--space-s);
         .matrix-title{
-            font-size: var(--font-size-l);
             text-align: center;
         }
 
@@ -97,13 +96,27 @@
         .matrix-wrapper{
             flex-direction: column;
         }
+        .matrix-title{
+            font-size: var(--font-size-l);
+        }
     }
     @media screen and (min-width: 768px) and (max-width: 1079px) {
         .matrix-wrapper{
             flex-direction: row;
         }
+        .matrix-title{
+            font-size: var(--font-size-xl);
+        }
+        .li-text{
+            font-size: var(--font-size-m);
+        }
     }
     @media screen and (min-width : 1080px) {
-        
+        .matrix-title{
+            font-size: var(--font-size-2xl);
+        }
+        .li-text{
+            font-size: var(--font-size-l);
+        }
     }
 </style>

@@ -2,7 +2,7 @@
 import { links } from "../../utils/links"
 import PrimaryButton from "../buttons/PrimaryButton.astro"
 ---
-<section class="global-section">
+<section class="global-section hero-section-helper">
     <div class="global-content-wrapper">
         <div class="text-wrapper">
             <div class="global-header-wrapper">
@@ -14,8 +14,8 @@ import PrimaryButton from "../buttons/PrimaryButton.astro"
                         <span>1</span>
                     </div>
                     <div class="step-text">
-                        <p class="global-bold-weight">Tell us what you are looking for</p>
-                        <p class="global-font-size-s">We’ll take it from here, so say goodbye to the manual search!</p>
+                        <p class="step-title">Tell us what you are looking for</p>
+                        <p class="step-expl">We’ll take it from here, so say goodbye to the manual search!</p>
                     </div>
                 </div>
                 <div class="step-wrapper">
@@ -23,8 +23,8 @@ import PrimaryButton from "../buttons/PrimaryButton.astro"
                         <span>2</span>
                     </div>
                     <div class="step-text">
-                        <p class="global-bold-weight">Get instant alerts</p>
-                        <p class="global-font-size-s">New rental online? We will let you know first!</p>
+                        <p class="step-title">Get instant alerts</p>
+                        <p class="step-expl">New rental online? We will let you know first!</p>
                     </div>
                 </div>
                 <div class="step-wrapper">
@@ -32,8 +32,8 @@ import PrimaryButton from "../buttons/PrimaryButton.astro"
                         <span>3</span>
                     </div>
                     <div class="step-text">
-                        <p class="global-bold-weight">Get more viewings</p>
-                        <p class="global-font-size-s">Have an advantage over others and be the first to reply</p>
+                        <p class="step-title">Get more viewings</p>
+                        <p class="step-expl">Have an advantage over others and be the first to reply</p>
                     </div>
                 </div>
             </div>
@@ -127,14 +127,32 @@ import PrimaryButton from "../buttons/PrimaryButton.astro"
     }
 
     @media screen and (max-width : 767px) {
-        .global-content-wrapper{
-
+        .step-title{
+            font-weight: 700;
+        }
+        .hero-section-helper{
+            margin-top: var(--space-2xl);
         }
     }
     @media screen and (min-width: 768px) {
         .global-content-wrapper{
             flex-direction: row;
             justify-content: space-between;
+        }
+        .step-title{
+            font-weight: 700;
+            font-size: var(--font-size-l);
+        }
+        .step-expl{
+            font-size: var(--font-size-m);
+        }
+        .hero-section-helper{
+            margin-top: var(--space-4xl);
+        }
+    }
+    @media screen and (min-width : 1080px) {
+        .hero-section-helper{
+            margin-top: var(--space-6xl);
         }
     }
 </style>

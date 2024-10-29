@@ -84,6 +84,9 @@ h1 span{
 .global-section{
     display: flex;
 }
+.global-section-medium{
+    display: flex;
+}
 .global-section-small{
     display: flex;
 }
@@ -170,6 +173,9 @@ h1 span{
     .global-section-small{
         padding: var(--space-6xl) var(--space-l);
     }
+    .global-section-medium{
+        padding: var(--space-6xl) var(--space-l);
+    }
     .global-header-wrapper{
         padding: 0 var(--space-2xl);
     }
@@ -179,6 +185,9 @@ h1 span{
         padding: var(--space-3xl) var(--space-4xl);
     }
     .global-section-small{
+        padding: var(--space-6xl) var(--space-4xl);
+    }
+    .global-section-medium{
         padding: var(--space-6xl) var(--space-4xl);
     }
     h1{
@@ -199,6 +208,11 @@ h1 span{
     .global-section-small{
         padding: var(--space-3xl) 0;
         max-width: 800px;
+        margin: 0 auto;
+    }
+    .global-section-medium{
+        padding: var(--space-3xl) 0;
+        max-width: 900px;
         margin: 0 auto;
     }
     h1{

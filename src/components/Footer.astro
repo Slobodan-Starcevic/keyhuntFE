@@ -35,7 +35,7 @@ import PrimaryButton from "./buttons/PrimaryButton.astro";
         gap: var(--space-2xl);
         .header-helper{
             text-align: center;
-            max-width: 450px;
+            max-width: 700px;
         }
     }
     .button-wrapper{
@@ -81,12 +81,18 @@ import PrimaryButton from "./buttons/PrimaryButton.astro";
         .footer-content-inner{
             flex-direction: column;
         }
+        h1{
+            font-size: var(--font-size-3xl);
+        }
     }
     @media screen and (min-width: 768px) and (max-width: 1079px) {
         .footer-content-inner{
             flex-direction: row;
             justify-content: space-between;
             padding: 0 var(--space-6xl);
+        }
+        h1{
+            font-size: var(--font-size-4xl);
         }
     }
     @media screen and (min-width : 1080px) {
@@ -96,6 +102,9 @@ import PrimaryButton from "./buttons/PrimaryButton.astro";
             padding: 0;
             max-width: 800px;
             margin: 0 auto;
+        }
+        h1{
+            font-size: var(--font-size-5xl);
         }
     }
 </style>
