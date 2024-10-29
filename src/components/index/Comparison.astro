@@ -4,7 +4,7 @@
 <section class="global-section">
     <div class="global-content-wrapper">
         <div class="global-header-wrapper">
-            <h1>stay ahead with <span class="global-orange-color">keyhunt</span></h1>
+            <h1 class="header-helper">stay ahead with <span class="global-orange-color">keyhunt</span></h1>
         </div>
         <div class="matrix-wrapper">
             <div class="matrix global-cloud-background">
@@ -54,7 +54,11 @@
 </section>
 
 <style lang="scss">
+    .header-helper{
+        text-align: center;
+    }
     .matrix-wrapper{
+        display: flex;
         border-radius: var(--radius-xl);
     }
 
@@ -88,8 +92,18 @@
                 }
             }
         }
+    }
+    @media screen and (max-width : 767px) {
+        .matrix-wrapper{
+            flex-direction: column;
         }
-    .matrix{
-
+    }
+    @media screen and (min-width: 768px) and (max-width: 1079px) {
+        .matrix-wrapper{
+            flex-direction: row;
+        }
+    }
+    @media screen and (min-width : 1080px) {
+        
     }
 </style>
