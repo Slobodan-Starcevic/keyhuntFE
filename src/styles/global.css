@@ -163,7 +163,7 @@ h1 span{
         display: none !important;
     }
     h1{
-        font-size: var(--font-size-2xl);
+        font-size: var(--font-size-3xl);
         line-height: 1.1;
         text-align: center;
     }
