@@ -5,7 +5,9 @@ import { links } from '../utils/links'
 <header class="header">
     <nav class="nav-wrapper">
         <img src="/images/text-logo-orange.svg" alt="keyhunt logo">
-        <PrimaryButton text='GET STARTED' href={links.home}/>
+        <div class="button-wrapper">
+            <PrimaryButton text='GET STARTED' href={links.home}/>
+        </div>
     </nav>
 </header>
 
@@ -14,6 +16,10 @@ import { links } from '../utils/links'
         width: 100%;
         height: 70px;
         // border-bottom: 2px solid var(--smoke);
+    }
+    .button-wrapper{
+        display: flex;
+        width: max-content;
     }
 
     .nav-wrapper{
