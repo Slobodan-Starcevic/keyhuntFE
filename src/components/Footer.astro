@@ -1,9 +1,53 @@
 ---
+import { links } from "../utils/links";
+import PrimaryButton from "./buttons/PrimaryButton.astro";
+
 
 ---
-<div>
-</div>
+<footer>
+    <section class="global-section">
+        <div class="global-content-wrapper">
+            <h1>find your next home <span class="global-orange-color">with keyhunt</span></h1>
+            <PrimaryButton text="GET STARTED FOR FREE" href={links.home}/>
+        </div>
+    </section>
+    <div class="valley-wrapper">
+        <img class="valley" src="/illustrations/valley-house.svg" alt="">
+    </div>
+    <section class="footer-content">
+        <img src="/images/text-logo-white.svg" alt="">
+        <p>© 2024 keyhunt. All Rights reserved</p>
+    </section>
+</footer>
 
-<style>
-
+<style lang="scss">
+    .footer-content{
+        position: relative;
+        width: 100%;
+        height: auto;
+        background-color: var(--fox);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        img{
+            margin: var(--space-2xl) 0;
+        }
+        p{
+            color: var(--snow);
+            font-size: var(--font-size-s);
+        }
+    }
+    .valley-wrapper{
+        position: relative;
+        overflow: hidden;
+        height: 80px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .valley{
+            height: 100%;
+            object-fit: cover;
+        }
+    }
 </style>

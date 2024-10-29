@@ -22,6 +22,9 @@
     --sky: hsl(199, 93%, 59%);
     --lemon: hsl(47, 100%, 54%);
     --elf: hsl(155, 66%, 50%);
+    --elf-light: hsl(155, 66%, 55%);
+    --flame: hsl(0, 100%, 63%);
+    --flame-light: hsl(0, 100%, 68%);
 
     --ease-1: cubic-bezier(0.475,0.425,0,0.995);
     --ease-2: cubic-bezier(0.835,-0.005,0.06,1);
@@ -86,28 +89,61 @@ h1 span{
     display: flex;
     width: 100%;
     height: 100%;
-    gap: var(--space-3xl);
+    gap: var(--space-2xl);
 }
 
-/* MISCELLANEOUS */
-.global-orange-text{
-    color: var(--fox);
+/* FONT COLORS */
+.global-orange-color{
+    color: var(--fox) !important;
+    fill: var(--fox) !important;
 }
-.global-font-light{
+.global-white-color{
+    color: var(--snow) !important;
+    fill: var(--snow) !important;
+}
+.global-elf-color{
+    color: var(--elf) !important;
+    fill: var(--elf) !important;
+}
+.global-elf-light-color{
+    color: var(--elf-light) !important;
+    fill: var(--elf-light) !important;
+}
+.global-flame-color{
+    color: var(--flame) !important;
+    fill: var(--flame) !important;
+}
+.global-flame-light-color{
+    color: var(--flame-light) !important;
+    fill: var(--flame-light) !important;
+}
+
+/* BACKGROUND COLORS */
+.global-cloud-background{
+    background-color: var(--cloud);
+}
+.global-orange-background{
+    background-color: var(--fox);
+}
+
+/* FONT WEIGHTS */
+.global-light-weight{
     font-weight: 300;
 }
-.global-font-regular{
+.global-regular-weight{
     font-weight: 400;
 }
-.global-font-medium{
+.global-medium-weight{
     font-weight: 500;
 }
-.global-font-bold{
+.global-bold-weight{
     font-weight: 700;
 }
-.global-font-black{
+.global-black-weight{
     font-weight: 900;
 }
+
+/* FONT SIZES */
 .global-font-size-s{
     font-size: var(--font-size-s);
 }
