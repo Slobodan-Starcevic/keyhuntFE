@@ -19,6 +19,7 @@
     --fox: hsl(35, 100%, 50%);
     --fox-light: hsl(35, 100%, 55%);
     --fox-dark: hsl(35, 100%, 40%);
+    --fox-pastel: hsl(37, 100%, 95%);
     --sky: hsl(199, 93%, 59%);
     --lemon: hsl(47, 100%, 54%);
     --elf: hsl(155, 66%, 50%);
@@ -137,6 +138,9 @@ h1 span{
 .global-orange-background{
     background-color: var(--fox);
 }
+.global-orange-pastel-background{
+    background-color: var(--fox-pastel);
+}
 
 /* FONT WEIGHTS */
 .global-light-weight{
@@ -205,7 +209,7 @@ h1 span{
 @media screen and (min-width : 1080px) {
     .global-section{
         padding: var(--space-3xl) 0;
-        max-width: 1000px;
+        max-width: 1200px;
         margin: 0 auto;
     }
     .global-section-small{

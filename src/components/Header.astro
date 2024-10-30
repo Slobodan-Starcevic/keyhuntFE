@@ -31,9 +31,20 @@ import { links } from '../utils/links'
             observer.observe(heroButton);
 		}
 	});
+
+    document.addEventListener('scroll', () => {
+        const header = document.getElementById('header');
+        if (window.scrollY !== 0){
+            header.classList.add('scrolled-header');
+            header.classList.remove('non-scrolled-header');
+        } else {
+            header.classList.add('non-scrolled-header');
+            header.classList.remove('scrolled-header');
+        }
+    });
 </script>
 
-<header class="header">
+<header class="header non-scrolled-header" id="header">
     <nav class="nav-wrapper">
         <img src="/images/text-logo-orange.svg" class="change" alt="keyhunt logo" id="header-logo">
         <div class="button-wrapper">
@@ -43,6 +54,12 @@ import { links } from '../utils/links'
 </header>
 
 <style lang="scss">
+    .scrolled-header{
+        border-bottom: 2px solid var(--cloud);
+    }
+    .non-scrolled-header{
+        border-bottom: 2px solid var(--snow);
+    }
     #header-logo{
         transition: all 0.3s var(--ease-1);
     }
@@ -52,6 +69,7 @@ import { links } from '../utils/links'
     .header{
         width: 100%;
         height: 70px;
+        min-height: 70px;
         background-color: var(--snow);
         position: fixed;
         top: 0;
@@ -64,6 +82,9 @@ import { links } from '../utils/links'
         width: max-content;
     }
 
+    .header{
+        width: 100vw;
+    }
     .nav-wrapper{
         width: 100%;
         height: 100%;
@@ -96,11 +117,16 @@ import { links } from '../utils/links'
     @media screen and (min-width : 1080px) {
         .header{
             padding: var(--space-l) 0;
-            max-width: 1000px;
             margin: 0 auto;
+            display: flex;
+            justify-content: center;
         }
-        .nav-wrapper img{
-            height: 100%;
+        .nav-wrapper {
+            max-width: 1200px;
+            
+            img{
+                height: 100%;
+            }
         }
     }
 </style>

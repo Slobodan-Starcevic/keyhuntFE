@@ -3,10 +3,11 @@ import { links } from "../../utils/links"
 import PrimaryButton from "../buttons/PrimaryButton.astro"
 ---
 <section class="global-section hero-section-helper">
+    <div class="global-orange-pastel-background"/>
     <div class="global-content-wrapper">
         <div class="text-wrapper">
             <div class="global-header-wrapper">
-                <h1>Finding a rental home has <span class="global-orange-color">never been easier</span></h1>
+                <h1 id="hero-title">Finding a rental home has <span class="global-orange-color">never been easier</span></h1>
             </div>
             <div class="steps-wrapper">
                 <div class="step-wrapper">
@@ -153,6 +154,14 @@ import PrimaryButton from "../buttons/PrimaryButton.astro"
     @media screen and (min-width : 1080px) {
         .hero-section-helper{
             margin-top: calc(var(--space-6xl) + 70px);
+        }
+        #hero-title{
+            font-size: var(--font-size-5xl);
+        }
+        .image-wrapper{
+            img{
+                width: 90%;
+            }
         }
     }
 </style>
